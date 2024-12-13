@@ -4,24 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "js-watch": "webpack --config webpack.dev.js --watch",
-    "js": "webpack --config webpack.prod.js",
+    "js": "vite build",
     "css": "tailwindcss -i ./src/styles.css -o ./app/static/css/styles.css --minify",
     "css-watch": "tailwindcss -i ./src/styles.css -o ./app/static/css/styles.css --watch",
-    "build": "yarn css && yarn js"
+    "build": "yarn css && yarn js",
+    "js-watch": "vite build --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vitejs/plugin-legacy": "^6.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-vue": "^5.2.1",
     "flowbite": "^1.6.4",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.20",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^5.0.0",
     "mini-css-extract-plugin": "^2.7.5",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.49",
     "postcss-loader": "^7.2.4",
     "postcss-preset-env": "^8.3.1",
     "style-loader": "^3.3.2",

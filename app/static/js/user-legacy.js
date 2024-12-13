@@ -1,0 +1,1 @@
+System.register([],(function(e,t){"use strict";return{execute:function(){var e=document.querySelector("#table-search-users"),t=document.querySelector("#table-search-user-button");t&&e&&(console.log("searchInputButton",t),t.addEventListener("click",(function(){var t=new URL(window.location.href);t.searchParams.set("q",e.value),window.location.href="".concat(t.href)})))}}}));
