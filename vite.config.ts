@@ -1,10 +1,9 @@
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
-import legacy from '@vitejs/plugin-legacy';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [react(), legacy()],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -12,11 +11,12 @@ export default defineConfig({
   },
   build: {
     outDir: 'app/static',
-    emptyOutDir: false, // Додаємо цю опцію, щоб не очищувати вихідну директорію
+    emptyOutDir: false,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src/base.ts'),
+        base: path.resolve(__dirname, 'src/base.ts'),
         user: path.resolve(__dirname, 'src/user.ts'),
+        reactApp: path.resolve(__dirname, 'src/react-app.tsx'),
       },
       output: {
         entryFileNames: 'js/[name].js',

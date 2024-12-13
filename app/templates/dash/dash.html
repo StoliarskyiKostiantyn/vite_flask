@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<div
+  id="react-root"
+  class="pt-8 relative overflow-x-auto shadow-md sm:rounded-lg"></div>
+{% endblock %} {% block scripts %}
+<script
+  src="{{ url_for('static', filename='js/reactApp.js') }}"
+  type="module"
+  defer></script>
+{% endblock %}
