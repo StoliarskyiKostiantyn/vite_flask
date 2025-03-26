@@ -6,22 +6,24 @@
   "scripts": {
     "dev": "vite",
     "js": "vite build",
+    "js-watch": "vite build --watch",
     "css": "tailwindcss -i ./src/styles.css -o ./app/static/css/styles.css --minify",
     "css-watch": "tailwindcss -i ./src/styles.css -o ./app/static/css/styles.css --watch",
-    "build": "yarn css && yarn js",
-    "js-watch": "vite build --watch"
+    "build": "yarn css && yarn js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "flowbite": "^1.6.4",
+    "html5-qrcode": "^2.3.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^3.4.16",
     "vite": "^6.0.3"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",

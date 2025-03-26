@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client';
 const App = () => {
   return (
     <div className="pt-8 relative overflow-x-auto shadow-md sm:rounded-lg">
-      <h2 className="dark:text-white text-black">THIS IS REACT@@@@@@</h2>
+      <h2 className="dark:text-white text-black">THIS IS REACT@@@@@</h2>
+      <div id="reader" className="w-[600px]"></div>
     </div>
   );
 };
